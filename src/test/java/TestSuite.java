@@ -9,7 +9,7 @@ import org.junit.runners.Suite;
  */
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({AddressBookTest.class, BuddyInfoTest.class, JPATest.class})
+@Suite.SuiteClasses({AddressBookTest.class, BuddyInfoTest.class})
 
 public class TestSuite {
 }
