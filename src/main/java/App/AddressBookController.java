@@ -19,7 +19,7 @@ public class AddressBookController {
     @Autowired
     private AddressBookRepo repo;
 
-    @GetMapping("/AddressBook")
+    @GetMapping("/")
     public String getAddressBookContents(Model model)
     {
         List<AddressBook> books = repo.findAll();

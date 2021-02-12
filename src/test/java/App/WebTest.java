@@ -23,31 +23,31 @@ public class WebTest {
 
     @Test
     public void buddy1NameTest() throws Exception {
-        this.mockMvc.perform(get("/AddressBook")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("Shoaib")));
     }
 
     @Test
     public void buddy1NameNumber() throws Exception {
-        this.mockMvc.perform(get("/AddressBook")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("6138896587")));
     }
 
     @Test
     public void buddy2NameTest() throws Exception {
-        this.mockMvc.perform(get("/AddressBook")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("Omar")));
     }
 
     @Test
     public void buddy1AddressTest() throws Exception {
-        this.mockMvc.perform(get("/AddressBook")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("123 water road")));
     }
 
     @Test
     public void buddy2AddressTest() throws Exception {
-        this.mockMvc.perform(get("/AddressBook")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("153 water road")));
     }
 }
