@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+
+    <beans>
+        <bean id="addressBook" class="App.AddressBook"/>
+
+        <bean id="view" class="App.View" init-method="init" >
+            <constructor-arg>
+                <ref bean="addressBook"/>
+            </constructor-arg>
+        </bean>
+
+        <bean id="controller" class="App.AddressBookController">
+            <constructor-arg>
+                <ref bean="addressBook"/>
+            </constructor-arg>
+            <constructor-arg>
+                <ref bean="view"/>
+            </constructor-arg>
+        </bean>
+</beans>
