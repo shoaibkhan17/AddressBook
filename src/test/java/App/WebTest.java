@@ -28,6 +28,12 @@ public class WebTest {
     }
 
     @Test
+    public void buddy1NameNumber() throws Exception {
+        this.mockMvc.perform(get("/AddressBook")).andDo(print()).andExpect(status().isOk())
+                .andExpect(content().string(containsString("6138896587")));
+    }
+
+    @Test
     public void buddy2NameTest() throws Exception {
         this.mockMvc.perform(get("/AddressBook")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("Omar")));
