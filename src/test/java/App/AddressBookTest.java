@@ -1,3 +1,5 @@
+package App;
+
 import App.AddressBook;
 import App.BuddyInfo;
 

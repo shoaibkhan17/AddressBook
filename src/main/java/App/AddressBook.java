@@ -13,7 +13,7 @@ import javax.persistence.*;
 
 @Entity
 public class AddressBook {
-	
+
 	private Long id;
 	private String name;
 	private List<BuddyInfo> buddies = new ArrayList<BuddyInfo>();
