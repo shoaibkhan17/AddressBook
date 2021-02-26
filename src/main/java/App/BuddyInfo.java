@@ -13,7 +13,7 @@ import javax.persistence.Id;
 @Entity
 public class BuddyInfo {
     private long id;
-    private String name;
+    public String name;
     private String address;
     private String phoneNumber;
 
@@ -33,6 +33,12 @@ public class BuddyInfo {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
+    }
+
+    public BuddyInfo(BuddyInfo buddy) {
+        this.name = buddy.getName();
+        this.address = buddy.getAddress();
+        this.phoneNumber = buddy.getPhoneNumber();
     }
 
     /**

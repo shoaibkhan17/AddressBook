@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
     <body>
-    <h1 style="color: #5e9ca0;">---Address Book---</h1>
+    <h3 style="color: #5e9ca0;">--- Address Books ---</h3>
     <tr th:each="addressBook: ${books}">
         <td> Name: </td>
         <td th:text="${addressBook.getName()}" /><br>
@@ -16,8 +16,22 @@
         <br><br>
     </tr>
 
-    <h2 style="color: #2e6c80;">---Address book contents for "book1"---</h2>
-    <tr th:each="buddy: ${buddies}">
+    <td> <h3 style="color: #2e6c80;"> --- Address Book1 Contents ---</h3> </td>
+        <tr th:each="buddy: ${book1Buddies}">
+            <td> Name: </td>
+            <td th:text="${buddy.getName()}" /><br>
+            <td> Address: </td>
+            <td th:text="${buddy.getAddress()}" /><br>
+            <td> Phone Number: </td>
+            <td th:text="${buddy.getPhoneNumber()}" /><br>
+            <br><br>
+        </tr>
+    </tr>
+
+    <a href="/addToBook1"><button type="button" >Edit Address Book1 Contents</button></a>
+
+    <td> <h3 style="color: #2e6c80;"> --- Address Book2 Contents ---</h3> </td>
+    <tr th:each="buddy: ${book2Buddies}">
         <td> Name: </td>
         <td th:text="${buddy.getName()}" /><br>
         <td> Address: </td>
@@ -26,5 +40,9 @@
         <td th:text="${buddy.getPhoneNumber()}" /><br>
         <br><br>
     </tr>
+    </tr>
+
+    <a href="/addToBook2"><button type="button" >Edit Address Book2 Contents</button></a>
+
     </body>
 </html>
